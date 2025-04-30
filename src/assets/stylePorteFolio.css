@@ -1,0 +1,29 @@
+.sectionAccueille{
+    background-image: url(../assets/img/fontTheque.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contactSection{
+    background-image: url(../assets/ImageSite/font-contact.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.nav a{
+    transition: 0.1s;
+    /* transform: scale(); */
+    font-size: 17px;
+
+}
+.nav a:hover {
+    color: #034b65;
+}
+
+.sectionFormation{
+    background-image: url(../assets/img/globe.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
