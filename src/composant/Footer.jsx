@@ -70,7 +70,7 @@ const Footer = () => {
               <Link
                 to="#"
                 className="hover:text-blue-500"
-                onClick={(e) => redirectViaFooter(e, "plan", "/")}
+                onClick={(e) => redirectViaFooter(e, "plan", "/site")}
               >
                 - Plan d'Accée & Contact
               </Link>
@@ -78,7 +78,7 @@ const Footer = () => {
                 to="#"
                 className="hover:text-blue-500"
                 onClick={(e) =>
-                  redirectViaFooter(e, "pres-inscri", "/cours-lycee")
+                  redirectViaFooter(e, "pres-inscri", "/site/cours-lycee")
                 }
               >
                 - Inscription Cours
@@ -87,13 +87,13 @@ const Footer = () => {
                 to="#"
                 className="hover:text-blue-500"
                 onClick={(e) =>
-                  redirectViaFooter(e, "formation-inscri", "/formation-digital")
+                  redirectViaFooter(e, "formation-inscri", "/site/formation-digital")
                 }
               >
                 - Inscription Formation
               </Link>
               <Link
-                to="/digitheque"
+                to="/site/digitheque"
                 className="hover:text-blue-500"
                 
               >

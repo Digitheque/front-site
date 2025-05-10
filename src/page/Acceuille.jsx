@@ -160,7 +160,7 @@ const Acceuille = () => {
             <div className="flex items-center justify-start space-x-4 cursor-pointer">
               <MoveRight className="text-bleuRoi" />
               <Link
-                to="/digitheque"
+                to="/site/digitheque"
                 className="text-gray-500 hover:text-blue-500"
               >
                 Abonnement Digithèque
@@ -172,7 +172,7 @@ const Acceuille = () => {
               <Link
                 className="text-gray-500 hover:text-blue-500"
                 onClick={(e) =>
-                  redirectViaOuverture(e, "pres-inscri", "/cours-lycee")
+                  redirectViaOuverture(e, "pres-inscri", "/site/cours-lycee")
                 }
               >
                 Inscription aux Cours-lycée
@@ -187,7 +187,7 @@ const Acceuille = () => {
                   redirectViaOuverture(
                     e,
                     "formation-inscri",
-                    "/formation-digital"
+                    "/site/formation-digital"
                   )
                 }
               >

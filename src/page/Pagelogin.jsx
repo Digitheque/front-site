@@ -1,92 +1,141 @@
-import { useState } from 'react';
-import { Globe } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import logo from "../assets/img/logo.png";
+import { ClipLoader } from "react-spinners";
+import { Send } from "lucide-react";
+import { FaFirefoxBrowser } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-export default function LoginPage() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+const Pagelogin = () => {
+  const [formData, setFormData] = useState({
+    pseudo: "",
+    password: "",
+    message: "",
+  });
 
-  const navig = useNavigate()
+  const [focusedField, setFocusedField] = useState(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleFocus = (field) => {
+    setFocusedField(field);
+  };
+
+  const handleBlur = () => {
+    setFocusedField(null);
+  };
+
+  const isActive = (field) => {
+    return focusedField === field || formData[field] !== "";
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if(username == "Digitheque" && password == "Digitheque1234") {
-        navig("/page");
-    }
-    else{
-        alert("Validation incorrect")
+    setIsSubmitting(true);
+    if (formData.pseudo === "digitheque") {
+      if (formData.password === "12345678") {
+        setIsSubmitting(false);
+        navigate("/site");
+      } else {
+        alert("Mot de passe Incorrect !");
+        setIsSubmitting(false);
+      }
+    } else {
+      alert("Pseudo Incorrect !");
+      setIsSubmitting(false);
     }
   };
 
   return (
-    <div className="flex flex-col min-h-screen bg-white relative overflow-hidden">
-      {/* Cercles décoratifs */}
-      <div className="absolute top-0 left-0 w-[80vw]  sm:w-[50rem] h-[30vh] sm:h-[80vh] bg-bleuRoiFonce rounded-br-full"></div>
-      <div className="absolute bottom-0 right-0 w-[10rem] h-[15vh] bg-bleuRoiFonce rounded-tl-full"></div>
-      <div className="absolute bottom-16 left-16 w-4 h-4 bg-bleuRoiFonce rounded-full"></div>
-      
-      <div className="flex flex-col md:flex-row h-full w-full relative z-10">
-        {/* Partie gauche - Titre */}
-        <div className="text-white mt-[-15vh] sm:mt-0 p-12 md:w-1/2">
-          <div className="mt-24">
-            <h2 className="text-2xl font-normal">Bienvenue</h2>
-            <h1 className="text-5xl font-bold mt-2">Digitheque</h1>
+    <div className="w-full h-screen">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[30rem] px-4 py-4 shadow-lg rounded-lg">
+        <div className="w-full h-full">
+          <div className="flex items-center space-x-8">
+            <img src={logo} alt="" width={100} />
+
+            <p className="font-bold text-bleuRoi text-[20px]">
+              Digithèque Authentification
+            </p>
           </div>
-        </div>
-        
-        {/* Partie droite - Formulaire */}
-        <div className="md:w-1/2 p-4 md:p-12 flex items-center justify-center">
-          <div className="w-full max-w-md">
-            <h2 className="text-3xl font-bold text-bleuRoiFonce mb-8 text-center mt-[10vh] sm:mt-[15vh]">Authetification</h2>
-            
-            <form onSubmit={handleSubmit}>
-              <div className="mb-6">
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg className="w-5 h-5 text-bleuRoiFonce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                    </svg>
-                  </div>
-                  <input
-                    type="text"
-                    className="w-full p-3 pl-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Utilisateur ..."
-                    value={username}
-                    onChange={(e) => setUsername(e.target.value)}
-                  />
-                </div>
-                <div className="h-1 w-full bg-bleuRoiFonce mt-1"></div>
-              </div>
-              
-              <div className="mb-8">
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg className="w-5 h-5 text-bleuRoiFonce" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-                    </svg>
-                  </div>
-                  <input
-                    type="password"
-                    className="w-full p-3 pl-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    placeholder="Mot de passe ..."
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </div>
-                <div className="h-1 w-full bg-bleuRoiFonce mt-1"></div>
-              </div>
-              
-              <button
-                type="submit"
-                className="w-full bg-bleuRoiFonce text-white p-4 rounded-md flex items-center justify-center font-medium"
+
+          <div className="text-center py-2">
+            <p>Veuillez remplir les champs !</p>
+          </div>
+
+          <form onSubmit={handleSubmit} className="space-y-6 my-[1rem]">
+            <div className="relative">
+              <input
+                type="text"
+                id="pseudo"
+                name="pseudo"
+                value={formData.pseudo}
+                onChange={handleChange}
+                onFocus={() => handleFocus("pseudo")}
+                onBlur={handleBlur}
+                className="block w-full px-4 py-1 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-300 h-14 pt-6 pb-2"
+                required
+              />
+              <label
+                htmlFor="pseudo"
+                className={`absolute left-3 px-1 transition-all duration-200 pointer-events-none bg-white ${
+                  isActive("pseudo")
+                    ? "text-xs text-bleuRoi top-2"
+                    : "text-gray-500 text-base top-1/2 -translate-y-1/2"
+                }`}
               >
-                <Globe className="mr-2" size={20} />
-                Valider
-              </button>
-            </form>
-          </div>
+                Pseudo
+              </label>
+            </div>
+
+            <div className="relative">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                onFocus={() => handleFocus("password")}
+                onBlur={handleBlur}
+                className="block w-full px-4 py-3 text-gray-700 bg-white border border-gray-300 rounded-md focus:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-300 h-14 pt-6 pb-2"
+                required
+              />
+              <label
+                htmlFor="password"
+                className={`absolute left-3 px-1 transition-all duration-200 pointer-events-none bg-white ${
+                  isActive("password")
+                    ? "text-xs text-bleuRoi top-2"
+                    : "text-gray-500 text-base top-1/2 -translate-y-1/2"
+                }`}
+              >
+                Mot de passe
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="flex items-center justify-center px-6 py-2 border-[2px] bg-bleuRoi hover:bg-bleuRoiFonce text-white font-medium rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors space-x-3"
+            >
+              <span>Connecter</span>
+              {isSubmitting ? (
+                <ClipLoader color="white" size={18} />
+              ) : (
+                <>
+                  <FaFirefoxBrowser size={18} className="ml-2" />
+                </>
+              )}
+            </button>
+          </form>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default Pagelogin;

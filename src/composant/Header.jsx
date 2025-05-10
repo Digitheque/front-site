@@ -30,7 +30,7 @@ const Header = () => {
     closeAllSubMenus();
     stateMenuMobile()
   
-    if (location.pathname === "/") {
+    if (location.pathname === "/site") {
       // Tu es déjà sur / : fais le scroll manuellement
       const sectionEl = document.getElementById(section);
       if (sectionEl) {
@@ -38,7 +38,7 @@ const Header = () => {
       }
     } else {
       // Sinon, utilise navigate comme avant
-      navigate("/", { state: { scrollTo: section } });
+      navigate("/site", { state: { scrollTo: section } });
     }
   };
 
@@ -49,7 +49,7 @@ const Header = () => {
     closeAllSubMenus();
     stateMenuMobile()
   
-    if (location.pathname === "/cours-lycee") {
+    if (location.pathname === "/site/cours-lycee") {
       // Tu es déjà sur / : fais le scroll manuellement
       const sectionEl = document.getElementById(section);
       if (sectionEl) {
@@ -57,7 +57,7 @@ const Header = () => {
       }
     } else {
       // Sinon, utilise navigate comme avant
-      navigate("/cours-lycee", { state: { scrollTo: section } });
+      navigate("/site/cours-lycee", { state: { scrollTo: section } });
     }
   };
 
@@ -68,7 +68,7 @@ const Header = () => {
     closeAllSubMenus();
     stateMenuMobile()
   
-    if (location.pathname === "/formation-digital") {
+    if (location.pathname === "/site/formation-digital") {
       // Tu es déjà sur / : fais le scroll manuellement
       const sectionEl = document.getElementById(section);
       if (sectionEl) {
@@ -76,7 +76,7 @@ const Header = () => {
       }
     } else {
       // Sinon, utilise navigate comme avant
-      navigate("/formation-digital", { state: { scrollTo: section } });
+      navigate("/site/formation-digital", { state: { scrollTo: section } });
     }
   };
 
@@ -302,14 +302,14 @@ const Header = () => {
             {isSubMenuOpen4 && (
               <div className="absolute w-auto py-4 top-full left-[-1rem] mt-2 bg-white text-black rounded shadow-lg">
                 <Link
-                  to="/digitheque"
+                  to="/site/digitheque"
                   className="block px-4 py-2 hover:text-bleuRoi whitespace-nowrap hover:bg-gray-100"
                   onClick={closeAllMenus}
                 >
                   Présentation
                 </Link>
                 <Link
-                  to="/digitheque"
+                  to="/site/digitheque"
                   className="block px-4 py-2 hover:text-bleuRoi whitespace-nowrap hover:bg-gray-100"
                   onClick={closeAllMenus}
                 >
@@ -491,14 +491,14 @@ const Header = () => {
                 {isSubMenuOpen4 && (
                   <div className="bg-gray-50">
                     <Link
-                      to="/digitheque"
+                      to="/site/digitheque"
                       className="block px-14 py-2 hover:bg-gray-50 hover:text-bleuRoi"
                       onClick={closeAllMenus}
                     >
                       Présentation
                     </Link>
                     <Link
-                      to="/digitheque"
+                      to="/site/digitheque"
                       className="block px-14 py-2 hover:bg-gray-50 hover:text-bleuRoi"
                       onClick={closeAllMenus}
                     >
