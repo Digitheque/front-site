@@ -1,6 +1,4 @@
 import {
-  ArrowRight,
-  Facebook,
   Mail,
   MapPin,
   MoveRight,
@@ -33,18 +31,19 @@ const PlanAcce = () => {
         >
           <MapDigitheque />
         </div>
-        <div className="md:col-span-6 shadow-sm rounded-r-lg px-4 md:px-14 py-4 md:py-10">
-          <h1 className="text-[25px] text-bleuRoi font-bold" id="slide-plan">
-            Contacts Précis
+        <div className="md:col-span-6 shadow-sm rounded-r-lg px-4 md:px-14 py-4 md:py-5">
+          <h1 className="text-[20px] text-bleuRoi font-bold" id="slide-plan">
+            Pour venir à la Digithèque Fianarantsoa
           </h1>
           <p id="slide-plan">
-            Vous avez des questions, <br className="hidden md:block" /> une
-            sugestion, envie d'échanger ou de nous suivre ?
+            Terminus Andrainjato des bus 38 et 40 <br />
+            Suivre la Route de Mahasoabé, <br />
+            Tourner à gauche après la barrière de la police. <br />
           </p>
 
           <hr className="my-4" />
           <p className="font-bold text-gray-500" id="slide-plan">
-            N'hésitez pas à nous contacter, nous serons ravis de vous répondre
+            <strong> Appels </strong>: Appels direct WhatsApp ou Telegramm
           </p>
 
           <div className="grid">
@@ -55,7 +54,7 @@ const PlanAcce = () => {
 
             <div className="flex items-center justify-start space-x-4 my-3">
               <Mail className="text-bleuRoi" id="slide-plan" />
-              <p id="slide-plan">digitheque1234@gmail.com</p>
+              <p id="slide-plan">digitheque.mg@gmail.com</p>
             </div>
           </div>
 
@@ -65,7 +64,7 @@ const PlanAcce = () => {
           >
             <MapPin />
             <a
-              href="https://www.google.com/maps?q=-21.933,46.983"
+              href="https://www.google.com/maps?q=-21.46651888490075,47.11454236646774"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white"

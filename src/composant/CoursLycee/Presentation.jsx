@@ -29,7 +29,7 @@ const Presentation = () => {
           className="text-[40px] font-bold text-center md:text-start"
           id="slide-presentation"
         >
-          Objectif
+          EXAMENS-CONCOURS
         </h1>
         <div className="w-[30%] h-[0.5rem] rounded-full bg-bleuRoi my-6"></div>
         <div
@@ -41,59 +41,23 @@ const Presentation = () => {
       </div>
 
       <div id="slide-presentation">
-        {isNext ? (
-          <p>
-            Ainsi, dans une approche pédagogique adaptée aux modes
-            d’apprentissage des jeunes actuels et aux outils disponibles,
-            Digithèque offre les compétences de ses responsables pédagogiques et
-            de ses enseignants pour que les élèves apprennent avec plus de
-            facilité et plus de passion. Il intègre ainsi l’IA, des applications
-            dédiées et d'autres outils pour aider les élèves.
-            <br />
-            <br />
-            Digithèque propose seulement des accompagnements personnalisés en
-            Mathématiques, en Physique Chimie et Sciences Économiques.
-            Toutefois, pendant leurs temps de pause, les élèves peuvent
-            travailler en autonomie ou interagir avec une IA pour apprendre
-            l’informatique, pratiquer une langue ou apprendre la finance
-            numérique.
-          </p>
-        ) : (
-          <p>
-            Dans notre société contemporaine, l’Intelligence Artificielle (IA)
-            change profondément les modalités d’apprentissage et notre rapport
-            avec la connaissance.
-            <br />
-            <br />
-            Avec le modèle standard de type transmissif, le professeur donne des
-            définitions et aide les apprenants à mieux comprendre le concepts à
-            travers des exercices, des analyses de documents etc. Avec l’IA
-            générative, l’élève peut générer lui-même des exercices pour son
-            entraînement et faire corriger ses exercices. Il peut dialoguer avec
-            une IA pour apprendre une langue. L’appui et les opportunités
-            offertes par l’IA sont assez vastes aussi bien pour l’apprentissage
-            de nature cognitive ou pour une série d'entraînement d’acquisition
-            de compétences et de savoir-faire.
-          </p>
-        )}
-
-        <button
-          onClick={() => setIsNext(!isNext)}
-          className="px-4 py-1 rounded-md bg-bleuRoi text-white flex items-center justify-center space-x-4 my-4"
-        >
-          {isNext ? (
-            <>
-              {" "}
-              <MoveLeft />
-              <p>Retour</p>
-            </>
-          ) : (
-            <>
-              <p>Lisez-plus</p>
-              <MoveRight />
-            </>
-          )}
-        </button>
+        <p>
+          La digithèque se donne pour mission d’ouvrir des opportunités à nos
+          jeunes en offrant des formations et en valorisant leurs compétences.
+          Nous nous informons en permanence sur le marché de formations en
+          identifiant, les examens, les concours et les offres de formations
+          nationaux et internationaux comme le baccalauréat, les examens dans le
+          supérieur, les concours d’accès à des postes de fonctionnaires, des
+          concours de formations à l'international etc.
+        </p>
+        <br />
+        <p>
+          Pour mieux préparer nos jeunes, nous proposons des accompagnements
+          individualisés sous forme de stages intensifs, de cours de soutien et
+          d’autres dispositifs pédagogiques adaptés aux besoins. <br />
+          Nous pouvons identifier avec vous les besoins pour mieux vous
+          accompagner.
+        </p>
       </div>
 
       <br className="block md:hidden" />
@@ -121,19 +85,17 @@ const Presentation = () => {
       </div>
 
       <div id="slide-presentation">
-        L’accompagnement personnalisé proposé par Digithèque n’est pas une
-        répétition des cours en classe ni une séance d'exercices corrigés, que
-        l’élève peut faire avec l’IA disponible dans nos machines. Nous
-        suscitons et identifions les passions et l’intérêt de l’élève l’aider à
-        comprendre et produire des raisonnements dans la discipline concernée.
-        <li className="text-[18px] font-bold text-gray-500">
-          Mathématiques et physique de niveau lycée
-        </li>
-        <p>
-          Les cours sont regroupés par thématiques ou chapitres. Par exemple :
-          calculs intégrale, ou études de suites ou études de fonctions ou
-          encore programmation sur Python
-        </p>
+        Sur le plan pédagogique, contrairement au modèle standard que nous avons
+        hérité du système français, Digithèque met en pratique des approches
+        pédagogiques innovantes inspirées des pédagogies pratiquées dans les
+        amériques du nord, tout en prenant en compte nos habitudes à apprendre.
+        On incite les apprenants à prendre des initiatives, à donner du sens au
+        contenu théorique. On les invite à fixer un objectif pour lequel leurs
+        apprentissages ont un sens. Bien que l’essentiel des activités
+        pédagogiques soient dans une salle équipée d’un tableau blanc,
+        Digithèque intègre dans ses dispositifs des outils numériques, plus
+        particulièrement les applications interactives et l’Intelligence
+        Artificielle générative.
       </div>
 
       <br className="block md:hidden" />
@@ -161,7 +123,6 @@ const Presentation = () => {
         concours et les opportunités nationales ou internationales. Nous
         mobilisons notre équipe pour préparer ceux qui le souhaitent pour
         participer à ces examens ou concours.
-       
       </div>
     </div>
   );

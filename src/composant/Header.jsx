@@ -137,7 +137,7 @@ const Header = () => {
           </div>
           <div className="flex items-center space-x-2">
             <Mail size={15} />
-            <p>digitheque1234@gmail.com</p>
+            <p>digitheque.mg@gmail.com </p>
           </div>
         </div>
 
@@ -247,7 +247,7 @@ const Header = () => {
                 isSubMenuOpen3 ? "text-bleuRoi font-bold" : "text-black"
               }`}
             >
-              <span>Formation-Digital</span>
+              <span>Formations-Digital</span>
               {isSubMenuOpen3 ? (
                 <ChevronDown size={15} />
               ) : (
@@ -433,7 +433,7 @@ const Header = () => {
                         : "text-black"
                     }`}
                 >
-                  <span>Formation-Digital</span>
+                  <span>Formations-Digital</span>
                   {isSubMenuOpen2 ? (
                     <ChevronDown size={15} />
                   ) : (

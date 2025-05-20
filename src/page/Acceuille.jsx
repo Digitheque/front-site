@@ -95,7 +95,10 @@ const Acceuille = () => {
               </p>
 
               <p className="lg:w-[35vw] md:text-[18px]" id="slide-ouverture">
-                digitheque1234@gmail.com | +261 38 05 557 25 | +261 37 75 321 30
+                +261 38 05 557 25 | +261 37 75 321 30
+              </p>
+              <p className="lg:w-[35vw] md:text-[18px]" id="slide-ouverture">
+                Email : digitheque.mg@gmail.com
               </p>
             </div>
 
@@ -147,12 +150,16 @@ const Acceuille = () => {
         }`}
         >
           <div className="col-span-6 lg:col-span-8 px-4">
-            <p className="font-bold text-[15px] text-bleuRoi">BUT</p>
+            <p className="font-bold text-[15px] text-bleuRoi">
+              POURQUOI DE PROJET ?
+            </p>
             <p className="text-gray-500 ">
-              L’équipe de Digithèque est formée d'enseignants d’université et
-              d’étudiants dans les domaines scientifiques à Madagascar ou à
-              l’étranger, dans le domaine de la finance et dans le domaine de
-              l’informatique. 
+              L’équipe de Digithèque est formée d'enseignants et étudiants à
+              l’Université de Fianarantsoa. En relation avec la diaspora
+              malagasy dans le monde entier et avec des acteurs internationaux,
+              et à travers digithèque, cette équipe offre à nos jeunes la
+              possibilité de créer des opportunités d’affaires et d’élargir
+              leurs carnet d’adresse.
             </p>
           </div>
 
@@ -191,7 +198,7 @@ const Acceuille = () => {
                   )
                 }
               >
-                Inscription aux Formations
+                Inscriptions aux formations en finance et informatique 
               </Link>
             </div>
           </div>

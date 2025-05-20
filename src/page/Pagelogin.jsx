@@ -54,7 +54,7 @@ const Pagelogin = () => {
 
   return (
     <div className="w-full h-screen">
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[30rem] px-4 py-4 shadow-lg rounded-lg">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full sm:w-[90%] md:w-[30rem] px-4 py-4 shadow-lg rounded-lg mx-1 md:mx-0">
         <div className="w-full h-full">
           <div className="flex items-center space-x-8">
             <img src={logo} alt="" width={100} />

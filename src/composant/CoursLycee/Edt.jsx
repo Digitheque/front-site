@@ -7,7 +7,7 @@ const Edt = () => {
   return (
     <div className="px-8 md:px-[7rem] mt-[8rem]">
       <h1 className="text-bleuRoi font-bold text-[1.5rem] text-center " id="slide-presentation">
-        EMPLOIS DU TEMPS{" "}
+      EMPLOI DU TEMPS <br /> POUR LES COURS  DE PRÉPARATION AU BACCALAURÉAT
       </h1>
 
       <div className="grid md:grid-cols-2 gap-12 mt-[2rem] md:mt-[4rem]">

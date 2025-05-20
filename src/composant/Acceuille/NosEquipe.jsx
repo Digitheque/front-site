@@ -49,13 +49,13 @@ const NosEquipe = () => {
           />
 
           <div className="mt-[2rem] md:mt-0" id="slide-equipetop">
-            <p className="font-bold text-[22px]">Monsieur François-Lévy</p>
-            <p className="text-gray-600">DAWIDSON </p>
+            <p className="font-bold text-[22px]">Monsieur DAWIDSON</p>
+            <p className="text-gray-600"> François-Lévy</p>
 
             <hr className="border-[1px] border-gray-200 mt-4" />
 
             <li className=" my-2">
-              Professeur agrégé de Mathématiques(Paris) et Maître de Conférences
+              Professeur agrégé de Mathématiques
               à l’Université de Fianarantsoa.
             </li>
 
@@ -87,8 +87,8 @@ const NosEquipe = () => {
           />
 
           <div className="mt-[2rem] md:mt-0" id="slide-equipetop">
-            <p className="font-bold text-[22px]">Monsieur Patrick </p>
-            <p className="text-gray-600">RAKOTOMAROLAHY </p>
+            <p className="font-bold text-[22px]">Monsieur RAKOTOMAROLAHY  </p>
+            <p className="text-gray-600"> Patrick</p>
 
             <hr className="border-[1px] border-gray-200 mt-4" />
             <li className=" my-2">
@@ -150,34 +150,7 @@ const NosEquipe = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-center md:justify-start space-x-4 mt-4">
-          <Star className="text-yellow-500" />
-          <p id="slide-aquipe" className="font-bold">
-            L’équipe pédagogique{" "}
-          </p>
-        </div>
-
-        <div className="flex items-center justify-start md:space-x-[5rem] md:flex-row flex-col text-center md:text-start">
-          <img
-            id="slide-equipetop"
-            src={equipe4}
-            alt=""
-            className="rounded-full h-[12rem] w-[12rem] border-[3px] border-bleuRoi"
-          />
-
-          <div className="mt-[2rem] md:mt-0" id="slide-equipetop">
-            <p className="font-bold text-[22px]">Enseignants Dans le Digital</p>
-            <p className="text-gray-600">Enseignants des cours d’accompagnement  </p>
-
-            <hr className="border-[1px] border-gray-200 mt-4" />
-            <li className=" my-2">
-              Les enseignants des cours d’accompagnement sont des professeurs en
-              poste alors que les enseignants dans le digital sont des
-              chercheurs ou étudiants qui ont au moins soutenus leurs mémoires
-              de master 2.
-            </li>
-          </div>
-        </div>
+       
       </div>
     </div>
   );
